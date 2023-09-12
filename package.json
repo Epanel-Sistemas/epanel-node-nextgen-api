@@ -1,0 +1,49 @@
+{
+  "name": "epanel-node-nextgen-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Epanel-Sistemas/epanel-node-nextgen-api.git",
+  "author": "Rodrigo Wippel <rodrigow1992@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "nodemon",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "lint": "eslint src/** --ext .ts --max-warnings=0",
+    "lint:fix": "eslint src/** --ext .ts --fix",
+    "postinstall": "yarn build"
+  },
+  "prisma": {
+    "schema": "src/infra/database/schema.prisma"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.2",
+    "@types/node": "^20.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "@graphql-tools/merge": "^9.0.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/utils": "^10.0.6",
+    "@prisma/client": "^5.2.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "uniqid": "^5.4.0"
+  }
+}
