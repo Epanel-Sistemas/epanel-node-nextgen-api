@@ -8,7 +8,7 @@ type Params = {
   password: string
 }
 
-export class Authentication {
+export class Authenticate {
   constructor(
     private readonly _userRepository: UserRepository,
     private readonly _hashProvider: HashProvider,

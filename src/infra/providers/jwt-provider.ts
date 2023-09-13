@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 
 export class JwtProvider {
-  encryptToken = (plaintext: string, secret: string): Promise<string> => {
+  encryptToken = (plaintext: string, secret: string) => {
     return jwt.sign({ id: plaintext }, secret)
   }
 

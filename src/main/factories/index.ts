@@ -1,12 +1,12 @@
-import { Authentication, CreateUser, GetUserById } from '@/domain/services'
+import { Authenticate, CreateUser, GetUserById } from '@/domain/services'
 import { UserRepository } from '@/infra/repositories'
 import { HashProvider, JwtProvider, UniqueIdProvider } from '@/infra/providers'
 
-export const makeAuthentication = () => {
+export const makeAuthenticate = () => {
   const userRepository = new UserRepository()
   const hashProvider = new HashProvider()
   const jwtProvider = new JwtProvider()
-  return new Authentication(userRepository, hashProvider, jwtProvider)
+  return new Authenticate(userRepository, hashProvider, jwtProvider)
 }
 
 export const makeCreateUser = () => {
